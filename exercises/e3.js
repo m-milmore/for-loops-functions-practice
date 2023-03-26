@@ -10,7 +10,10 @@
 
 export function getAverage(array) {
   // Your code goes here...
-
+  let sum = 0;
+  for (const i of array)
+    sum += i
+  return sum / array.length
 }
 
 
@@ -19,10 +22,16 @@ export function getAverage(array) {
  * Create a getStringSum(str) function that returns the sum of any integers that are in the string.
  * Example1: getStringSum("GH2U87A") => 17
  * Example2: getStringSum("GHIUJUHSG") => 0
- * */ 
+ * */
 
 export function getStringSum(str) {
   // Your code goes here...
+
+  let sum = 0
+  for (const i of str)
+    if (!isNaN(parseInt(i, 10)))
+      sum += parseInt(i)
+  return sum
 
 }
 

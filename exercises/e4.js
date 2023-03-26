@@ -3,12 +3,24 @@
 // findMinValueInArray([2, 45, 32, 3, 0, 46, 12]) => 0
 // findMaxValueInArray([2, 45, 32, 3, 0, 46, 12]) => 46
 
+// import { i } from "vitest/dist/index-761e769b";
+
 export function findMinValueInArray(array) {
   // Your code goes here...
+  let min = array[0];
+  for (const i of array)
+    if (i < min)
+      min = i
+  return min
 }
 
 export function findMaxValueInArray(array) {
   // Your code goes here...
+  let max = array[0]
+  for (const i of array)
+    if (i > max)
+      max = i
+  return max
 }
 
 // === TEST YOURSELF ===

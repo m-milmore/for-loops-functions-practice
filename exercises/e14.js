@@ -7,10 +7,22 @@
 
 export function getClientsWithWrongBalance(array) {
   // Your code goes here...
+  const arr = []
 
+  for (const i of array) {
+    let deps = 0.00
+    let withs = 0.00
+    if ("deposits" in i)
+      for (const j of i.deposits)
+        deps += j
+    if ("withdrawals" in i)
+      for (const j of i.withdrawals)
+        withs += j
+    if (deps - withs !== i.balance)
+      arr.push(i)
+  }
+  return arr
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-14"

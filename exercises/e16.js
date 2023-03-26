@@ -7,7 +7,14 @@
 
 export function flatArrays(array) {
   // Your code goes here...
-
+  const arr = [];
+  for (const i of array)
+    if (typeof i === "object")
+      for (const j of i)
+        arr.push(j)
+    else
+      arr.push(i)
+  return arr
 }
 
 

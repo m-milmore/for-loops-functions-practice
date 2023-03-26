@@ -6,6 +6,10 @@
 
 export function getAllClientNames(array) {
   // Your code goes here...
+  const arr = []
+  for (const i of array)
+    arr.push(i.name)
+  return arr
 
 }
 
